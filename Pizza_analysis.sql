@@ -97,60 +97,54 @@ ORDER BY Total_Quantity_Sold DESC;
 
 
 /* Top 5 pizzas generating highest revenue */
-SELECT 
+SELECT TOP 5
     pizza_name,
     SUM(total_price) AS Total_Revenue
 FROM pizza_sales
 GROUP BY pizza_name
-ORDER BY Total_Revenue DESC
-LIMIT 5;
+ORDER BY Total_Revenue DESC;
 
 
 /* Bottom 5 pizzas generating lowest revenue */
-SELECT 
+SELECT TOP 5
     pizza_name,
     SUM(total_price) AS Total_Revenue
 FROM pizza_sales
 GROUP BY pizza_name
-ORDER BY Total_Revenue ASC
-LIMIT 5;
+ORDER BY Total_Revenue ASC;
 
 
 /* Top 5 pizzas sold by quantity */
-SELECT 
+SELECT TOP 5
     pizza_name,
     SUM(quantity) AS Total_Pizza_Sold
 FROM pizza_sales
 GROUP BY pizza_name
-ORDER BY Total_Pizza_Sold DESC
-LIMIT 5;
+ORDER BY Total_Pizza_Sold DESC;
 
 
 /* Bottom 5 pizzas sold by quantity */
-SELECT 
+SELECT TOP 5
     pizza_name,
     SUM(quantity) AS Total_Pizza_Sold
 FROM pizza_sales
 GROUP BY pizza_name
-ORDER BY Total_Pizza_Sold ASC
-LIMIT 5;
+ORDER BY Total_Pizza_Sold ASC;
 
 
 /* Top 5 pizzas based on number of orders */
-SELECT 
+SELECT TOP 5
     pizza_name,
     COUNT(DISTINCT order_id) AS Total_Orders
 FROM pizza_sales
 GROUP BY pizza_name
-ORDER BY Total_Orders DESC
-LIMIT 5;
+ORDER BY Total_Orders DESC;
 
 
 /* Bottom 5 pizzas based on number of orders */
-SELECT 
+SELECT TOP 5
     pizza_name,
     COUNT(DISTINCT order_id) AS Total_Orders
 FROM pizza_sales
 GROUP BY pizza_name
-ORDER BY Total_Orders ASC
-LIMIT 5;
+ORDER BY Total_Orders ASC;
