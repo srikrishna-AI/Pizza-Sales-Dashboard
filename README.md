@@ -232,6 +232,12 @@ FROM pizza_sales GROUP BY pizza_name ORDER BY Total_Orders DESC LIMIT 5;
 
 ---
 
+## Result Screenshots
+<img width="1325" height="727" alt="image" src="https://github.com/user-attachments/assets/f2e66bf9-dc5d-464f-bf96-16a32784ffb6" />
+
+<img width="1336" height="728" alt="image" src="https://github.com/user-attachments/assets/44ff85a2-fb48-45e6-a81d-9d4520ffe74f" />
+
+
 ## 📄 License
 
 This project is for educational and analytical purposes.
